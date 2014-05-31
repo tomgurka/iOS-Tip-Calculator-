@@ -26,11 +26,12 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"Tip Calculator";
+        self.title = @"TIP CALCULATOR";
         // Custom initialization
     }
     return self;
 }
+
 
 - (void)viewDidLoad
 {
@@ -59,5 +60,10 @@
     
     self.tipLabel.text = [NSString stringWithFormat:@"$%0.2f", tipAmount];
     self.totalLabel.text = [NSString stringWithFormat:@"$%0.2f", totalAmount];
+}
+
+- (void)viewWillAppear:(BOOL)flag {
+    [super viewWillAppear:flag];
+    [UITextField becomeFirstResponder];
 }
 @end
