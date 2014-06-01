@@ -21,6 +21,10 @@
 		E26333FB1936F9F400BA699B /* tipcalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E26333FA1936F9F400BA699B /* tipcalculatorTests.m */; };
 		E26334071936FB3000BA699B /* TipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E26334051936FB3000BA699B /* TipViewController.m */; };
 		E26334081936FB3000BA699B /* TipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26334061936FB3000BA699B /* TipViewController.xib */; };
+		E2AFEDB1193BBC94005A698F /* form-total.png in Resources */ = {isa = PBXBuildFile; fileRef = E2AFEDB0193BBC94005A698F /* form-total.png */; };
+		E2AFEDB3193BC047005A698F /* form-split.png in Resources */ = {isa = PBXBuildFile; fileRef = E2AFEDB2193BC047005A698F /* form-split.png */; };
+		E2AFEDB5193BC0D1005A698F /* form-tip.png in Resources */ = {isa = PBXBuildFile; fileRef = E2AFEDB4193BC0D1005A698F /* form-tip.png */; };
+		E2AFEDB7193BC16D005A698F /* totals_background.png in Resources */ = {isa = PBXBuildFile; fileRef = E2AFEDB6193BC16D005A698F /* totals_background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		E26334041936FB3000BA699B /* TipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipViewController.h; sourceTree = "<group>"; };
 		E26334051936FB3000BA699B /* TipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipViewController.m; sourceTree = "<group>"; };
 		E26334061936FB3000BA699B /* TipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipViewController.xib; sourceTree = "<group>"; };
+		E2AFEDB0193BBC94005A698F /* form-total.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "form-total.png"; sourceTree = "<group>"; };
+		E2AFEDB2193BC047005A698F /* form-split.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "form-split.png"; sourceTree = "<group>"; };
+		E2AFEDB4193BC0D1005A698F /* form-tip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "form-tip.png"; sourceTree = "<group>"; };
+		E2AFEDB6193BC16D005A698F /* totals_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = totals_background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,7 @@
 		E26333C91936F9F400BA699B = {
 			isa = PBXGroup;
 			children = (
+				E2AFEDAF193BBC94005A698F /* images */,
 				E26333DB1936F9F400BA699B /* tipcalculator */,
 				E26333F41936F9F400BA699B /* tipcalculatorTests */,
 				E26333D41936F9F400BA699B /* Frameworks */,
@@ -150,6 +159,17 @@
 				E26333F71936F9F400BA699B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2AFEDAF193BBC94005A698F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				E2AFEDB6193BC16D005A698F /* totals_background.png */,
+				E2AFEDB4193BC0D1005A698F /* form-tip.png */,
+				E2AFEDB2193BC047005A698F /* form-split.png */,
+				E2AFEDB0193BBC94005A698F /* form-total.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,8 +248,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E26334081936FB3000BA699B /* TipViewController.xib in Resources */,
+				E2AFEDB3193BC047005A698F /* form-split.png in Resources */,
 				E26333E01936F9F400BA699B /* InfoPlist.strings in Resources */,
+				E2AFEDB1193BBC94005A698F /* form-total.png in Resources */,
+				E2AFEDB7193BC16D005A698F /* totals_background.png in Resources */,
 				E26333E81936F9F400BA699B /* Images.xcassets in Resources */,
+				E2AFEDB5193BC0D1005A698F /* form-tip.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +394,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tipcalculator/tipcalculator-Prefix.pch";
 				INFOPLIST_FILE = "tipcalculator/tipcalculator-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -384,7 +408,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tipcalculator/tipcalculator-Prefix.pch";
 				INFOPLIST_FILE = "tipcalculator/tipcalculator-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -449,6 +473,7 @@
 				E26334001936F9F400BA699B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E26334011936F9F400BA699B /* Build configuration list for PBXNativeTarget "tipcalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +482,7 @@
 				E26334031936F9F400BA699B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

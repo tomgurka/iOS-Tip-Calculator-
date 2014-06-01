@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TipViewController.h"
-
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @implementation AppDelegate
 
@@ -16,15 +16,26 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+   
+    //Nav Bar Customization
+    
+    //font
+     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+     [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
+     [UIFont fontWithName:@"AvenirNext-Regular" size:17.0], NSFontAttributeName, nil]];
+    
+    //color
+    [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0xCF3533)];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackOpaque];
+    
+    //broken opacity :(
+   // [[UINavigationBar appearance] setOpaque:(YES)];
+
     
     TipViewController *vc = [[TipViewController alloc] init];
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
                              
     self.window.rootViewController = nvc;
-
-                             
-    
-    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -57,3 +68,14 @@
 }
 
 @end
+
+@implementation UITextField (custom)
+- (CGRect)textRectForBounds:(CGRect)bounds {
+    return CGRectMake(bounds.origin.x + 10, bounds.origin.y + 8,
+                      bounds.size.width - 20, bounds.size.height - 10);
+}
+- (CGRect)editingRectForBounds:(CGRect)bounds {
+    return [self textRectForBounds:bounds];
+}
+@end
+
